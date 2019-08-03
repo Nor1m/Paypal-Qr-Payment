@@ -1,0 +1,439 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Project-Id-Version: QR payments via PayPal\n"
+"POT-Creation-Date: 2019-07-28 22:26+0700\n"
+"PO-Revision-Date: 2019-07-28 23:07+0700\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: nor1m-paypal-qr-payment.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
+"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
+"esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: ru\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: includes/class-npqp-form-fields.php:4
+msgid "Enable/Disable"
+msgstr "Включить/Выключить"
+
+#: includes/class-npqp-form-fields.php:5
+msgid "Enable QR payments via PayPal"
+msgstr "Включить QR платежи"
+
+#: includes/class-npqp-form-fields.php:11
+msgid "Title"
+msgstr "Заголовок"
+
+#: includes/class-npqp-form-fields.php:13
+msgid "This controls the title which the user sees during checkout."
+msgstr "Заголовок, который пользователь видит во время оформления заказа."
+
+#. Plugin Name of the plugin/theme
+#: includes/class-npqp-form-fields.php:14 nor1m-paypal-qr-payment.php:84
+msgid "QR payments via PayPal"
+msgstr "QR платежи с помощью PayPal"
+
+#: includes/class-npqp-form-fields.php:18
+msgid "Description"
+msgstr "Описание"
+
+#: includes/class-npqp-form-fields.php:20
+msgid "This controls the description which the user sees during checkout."
+msgstr "Описание, которое пользователь видит во время оформления заказа."
+
+#. Description of the plugin/theme
+#: includes/class-npqp-form-fields.php:21
+msgid "Take QR payments via PayPal on your store."
+msgstr "Принимайте  QR-платежи через PayPal в вашем магазине."
+
+#: includes/class-npqp-form-fields.php:24
+msgid "Sandbox mode"
+msgstr "Режим песочницы"
+
+#: includes/class-npqp-form-fields.php:25
+msgid "Enable Sandbox Mode"
+msgstr "Включить Sandbox режим"
+
+#: includes/class-npqp-form-fields.php:27
+msgid "Place the payment gateway in test mode using Sandbox API keys."
+msgstr ""
+"Переведите платежный шлюз в тестовый режим с помощью ключей Sandbox API."
+
+#: includes/class-npqp-form-fields.php:32
+msgid "Sandbox API Credentials"
+msgstr "Учетные данные API песочницы"
+
+#: includes/class-npqp-form-fields.php:36
+msgid "Sandbox API Client Id"
+msgstr "Sandbox API Client Id"
+
+#: includes/class-npqp-form-fields.php:40
+msgid "Sandbox PayPal Webhook Id"
+msgstr "Sandbox PayPal Webhook Id"
+
+#: includes/class-npqp-form-fields.php:44
+msgid "Sandbox API Client Secret"
+msgstr "Sandbox API Client Secret"
+
+#: includes/class-npqp-form-fields.php:48
+msgid "Live API Credentials"
+msgstr "Учетные данные Live API"
+
+#: includes/class-npqp-form-fields.php:52
+msgid "Live API Client Id"
+msgstr "Live API Client Id"
+
+#: includes/class-npqp-form-fields.php:56
+msgid "Live API Client Secret"
+msgstr "Live API Client Secret"
+
+#: includes/class-npqp-form-fields.php:60
+msgid "Live PayPal Webhook Id"
+msgstr "Live PayPal Webhook Id"
+
+#: includes/class-npqp-form-fields.php:64
+msgid "QR code settings"
+msgstr "Настройки QR кода"
+
+#: includes/class-npqp-form-fields.php:68
+msgid "QR page url"
+msgstr "Ссылка на страницу QR кода"
+
+#: includes/class-npqp-form-fields.php:69
+msgid "e.g. - qr-payments"
+msgstr "Например - qr-payments"
+
+#: includes/class-npqp-form-fields.php:75
+msgid "Width"
+msgstr "Ширина"
+
+#: includes/class-npqp-form-fields.php:76
+msgid "The width of the qr code(px)."
+msgstr "Ширина qr-кода в пикселях."
+
+#: includes/class-npqp-form-fields.php:82
+msgid "Height"
+msgstr "Высота"
+
+#: includes/class-npqp-form-fields.php:83
+msgid "The height of the qr code(px)."
+msgstr "Высота qr-кода в пикселях."
+
+#: includes/class-npqp-form-fields.php:89
+msgid "QR code stroke color"
+msgstr "Цвет штриха QR-кода"
+
+#: includes/class-npqp-form-fields.php:90
+msgid "In HEX format. e.g. - #000"
+msgstr "В шестнадцатеричном формате. например: #000"
+
+#: includes/class-npqp-form-fields.php:96
+msgid "Invoice details"
+msgstr "Детали счета-фактуры"
+
+#: includes/class-npqp-form-fields.php:100
+msgid "Detail note"
+msgstr "Примечание/Записка"
+
+#: includes/class-npqp-form-fields.php:101
+msgid "e.g. - Thank you for your purchase!"
+msgstr "Например - Спасибо за покупку!"
+
+#: includes/class-npqp-form-fields.php:103
+msgid "Thank you for your purchase!"
+msgstr "Спасибо за покупку!"
+
+#: includes/class-npqp-form-fields.php:107
+msgid "Detail term"
+msgstr "Детали сроков"
+
+#: includes/class-npqp-form-fields.php:108
+msgid "No refunds after 30 days."
+msgstr "Никаких возвратов после 30 дней."
+
+#: includes/class-npqp-form-fields.php:112
+msgid "Detail memo"
+msgstr "Детали memo"
+
+#: includes/class-npqp-form-fields.php:113
+msgid "This is a long contract"
+msgstr "Это долгий контракт"
+
+#: includes/class-npqp-form-fields.php:117
+msgid "Additional notes"
+msgstr "Дополнительные примечания"
+
+#: includes/class-npqp-form-fields.php:118
+msgid "Additional notes about your store"
+msgstr "Дополнительные заметки о вашем магазине"
+
+#: includes/class-npqp-form-fields.php:123
+msgid "Tax id"
+msgstr "Идентификационный номер налогоплательщика"
+
+#: includes/class-npqp-form-fields.php:127
+msgid "Invoicer data"
+msgstr "Данные счета-фактуры"
+
+#: includes/class-npqp-form-fields.php:131
+msgid "Given name"
+msgstr "Имя владельца"
+
+#: includes/class-npqp-form-fields.php:132
+msgid "e.g. - Vitaly"
+msgstr "Например - Виталий"
+
+#: includes/class-npqp-form-fields.php:137
+msgid "Surname"
+msgstr "Фамилия владельца"
+
+#: includes/class-npqp-form-fields.php:138
+msgid "e.g. - Mironov"
+msgstr "Например - Миронов"
+
+#: includes/class-npqp-form-fields.php:143
+msgid "Address 1"
+msgstr "Адрес первый"
+
+#: includes/class-npqp-form-fields.php:144
+msgid "e.g. - 1234 First Street"
+msgstr "Например - 1234 First Street"
+
+#: includes/class-npqp-form-fields.php:149
+msgid "Address 2"
+msgstr "Адрес второй"
+
+#: includes/class-npqp-form-fields.php:150
+msgid "e.g. - 12345 Hillside Court"
+msgstr "Например - 12345 Hillside Court"
+
+#: includes/class-npqp-form-fields.php:155
+msgid "City"
+msgstr "Город"
+
+#: includes/class-npqp-form-fields.php:156
+msgid "e.g. - Anytown"
+msgstr "Например - Москва"
+
+#: includes/class-npqp-form-fields.php:161
+msgid "State"
+msgstr "Регион/Область"
+
+#: includes/class-npqp-form-fields.php:162
+msgid "e.g. - CA"
+msgstr "Например - Московская область"
+
+#: includes/class-npqp-form-fields.php:167
+msgid "Country code"
+msgstr "Код страны"
+
+#: includes/class-npqp-form-fields.php:168
+msgid "e.g. - US"
+msgstr "Например - RU"
+
+#: includes/class-npqp-form-fields.php:173
+msgid "Postal code"
+msgstr "Почтовый индекс"
+
+#: includes/class-npqp-form-fields.php:174
+msgid "e.g. - 98765"
+msgstr "Например - 98765"
+
+#: includes/class-npqp-form-fields.php:179
+msgid "Phone Country code"
+msgstr "Код номера телефона"
+
+#: includes/class-npqp-form-fields.php:180
+msgid "e.g. - 001"
+msgstr "Например - 7"
+
+#: includes/class-npqp-form-fields.php:185
+msgid "National number"
+msgstr "Национальный номер"
+
+#: includes/class-npqp-form-fields.php:186
+msgid "e.g. - 4085551234"
+msgstr "Например - 9618930000"
+
+#: includes/class-npqp-form-fields.php:191
+msgid "Phone type"
+msgstr "Тип телефона"
+
+#: includes/class-npqp-form-fields.php:204
+msgid "Email address"
+msgstr "Почтовый адрес"
+
+#: includes/class-npqp-form-fields.php:205
+msgid "e.g. - merchant@example.com"
+msgstr "Например - merchant@example.com"
+
+#: includes/class-npqp-form-fields.php:210
+msgid "Website"
+msgstr "Веб-сайт"
+
+#: includes/class-npqp-form-fields.php:211
+msgid "The invoicer's website. e.g. - http://site.com"
+msgstr "Сайт продавца. Например - http://site.com"
+
+#: includes/class-npqp-form-fields.php:217
+msgid "Logo url"
+msgstr "Путь к изображению логотипа"
+
+#: includes/class-npqp-form-fields.php:218
+msgid ""
+"The full URL to an external logo image. The logo image must not be larger "
+"than 250 pixels wide by 90 pixels high. Https required."
+msgstr ""
+"Полный URL-адрес внешнего изображения логотипа. Изображение логотипа не "
+"должно превышать 250 пикселей в ширину и 90 пикселей в высоту. Требуется "
+"HTTPS Протокол."
+
+#: includes/class-npqp-form-fields.php:223
+msgid "Term"
+msgstr "Срок"
+
+#: includes/class-npqp-form-fields.php:227
+msgid "Term type"
+msgstr "Тип срока"
+
+#: includes/class-npqp-form-fields.php:244
+msgid "Due date(days)"
+msgstr "Срок выполнения (дней)"
+
+#: includes/class-npqp-form-fields.php:245
+msgid "e.g. - 30"
+msgstr "Например - 30"
+
+#: includes/class-npqp-form-fields.php:251
+msgid "Custom amount"
+msgstr "Произвольная оплата"
+
+#: includes/class-npqp-form-fields.php:255
+msgid "Custom amount inclusive"
+msgstr "Включить произвольную оплату"
+
+#: includes/class-npqp-form-fields.php:260
+msgid "Label"
+msgstr "Метка"
+
+#: includes/class-npqp-form-fields.php:262
+msgid "e.g. - Packing Charges"
+msgstr "Например - Сборы, Упаковка"
+
+#: includes/class-npqp-form-fields.php:266
+msgid "Currency code"
+msgstr "Код валюты"
+
+#: includes/class-npqp-form-fields.php:268
+msgid "e.g. - USD"
+msgstr "Например - RUB"
+
+#: includes/class-npqp-form-fields.php:272
+msgid "Currency value"
+msgstr "Сумма"
+
+#: includes/class-npqp-form-fields.php:274
+msgid "e.g. - 10.00"
+msgstr "Например - 10.10"
+
+#: includes/class-npqp-form-fields.php:278
+msgid "Tax"
+msgstr "Налог"
+
+#: includes/class-npqp-form-fields.php:282
+msgid "Tax inclusive"
+msgstr "Включить налог"
+
+#: includes/class-npqp-form-fields.php:287
+msgid "Tax name"
+msgstr "Название  налога"
+
+#: includes/class-npqp-form-fields.php:289
+msgid "e.g. - Sales Tax"
+msgstr "Например - Налог с продаж"
+
+#: includes/class-npqp-form-fields.php:293
+msgid "Tax percent"
+msgstr "Налоговый процент"
+
+#: includes/class-npqp-form-fields.php:295
+msgid "e.g. - 7.25"
+msgstr "Например - 7.25"
+
+#: includes/class-npqp-form-fields.php:299
+msgid "Tax calculated after discount"
+msgstr "Рассчитывать налог после скидки"
+
+#: includes/class-npqp-form-fields.php:304
+msgid "Configuration"
+msgstr "Конфигурация"
+
+#: includes/class-npqp-form-fields.php:308
+msgid "Unit of measure"
+msgstr "Единица измерения"
+
+#: includes/class-npqp-form-fields.php:319
+msgid "Billing phone type"
+msgstr "Тип телефона для выставления счетов"
+
+#: includes/class-npqp-form-fields.php:332
+msgid "Allow tip"
+msgstr "Разрешить советы/подсказки"
+
+#: includes/class-npqp-form-fields.php:337
+msgid "Short product description"
+msgstr "Краткое описание продукта "
+
+#: includes/class-npqp-form-fields.php:339
+msgid "Show short product description in invoice"
+msgstr "Показать краткое описание продукта"
+
+#: nor1m-paypal-qr-payment.php:85
+msgid "Payment with qr code"
+msgstr "Оплата с помощью QR-кода"
+
+#: nor1m-paypal-qr-payment.php:116
+msgid "Visit site"
+msgstr "Посетить сайт разработчика"
+
+#: nor1m-paypal-qr-payment.php:117
+msgid "Donate"
+msgstr "Сделать пожертвование"
+
+#: nor1m-paypal-qr-payment.php:185
+msgid "First name is required!"
+msgstr "Имя обязательно!"
+
+#: nor1m-paypal-qr-payment.php:217
+msgid "No valid payment link"
+msgstr "Платежная ссылка недействительна"
+
+#: nor1m-paypal-qr-payment.php:296
+msgid "Hey, your order is paid! Thank you!"
+msgstr "Эй, ваш заказ оплачен! Спасибо!"
+
+#: nor1m-paypal-qr-payment.php:356
+msgid "Action is missed"
+msgstr "Действие пропущено"
+
+#: nor1m-paypal-qr-payment.php:369
+msgid "Invalid order id"
+msgstr "Неверный номер заказа "
+
+#. Author of the plugin/theme
+msgid "Nor1mSoft"
+msgstr "Nor1mSoft"
+
+#. Author URI of the plugin/theme
+msgid "http://nor1m.ru"
+msgstr "http://nor1m.ru"

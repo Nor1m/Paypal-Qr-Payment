@@ -1,0 +1,584 @@
+25.07.2019/15:24:29: 31.173.240.174: createDraftInvoice
+array (
+  'href' => NULL,
+  'result' => '{"name":"UNPROCESSABLE_ENTITY","message":"The requested action could not be performed, semantically incorrect, or failed business validation.","debug_id":"5b87687868928","details":[{"field":"/detail/invoice_number","value":"4235","location":"body","issue":"DUPLICATE_INVOICE_NUMBER","description":"Invoice number is duplicate."}],"links":[{"href":"https://developer.paypal.com/docs/api/invoicing/#errors","rel":"information_link"}]}',
+)
+25.07.2019/15:24:29: 31.173.240.174: createDraftInvoice
+array (
+  '$result_arr' => 
+  array (
+    'name' => 'UNPROCESSABLE_ENTITY',
+    'message' => 'The requested action could not be performed, semantically incorrect, or failed business validation.',
+    'debug_id' => '5b87687868928',
+    'details' => 
+    array (
+      0 => 
+      array (
+        'field' => '/detail/invoice_number',
+        'value' => '4235',
+        'location' => 'body',
+        'issue' => 'DUPLICATE_INVOICE_NUMBER',
+        'description' => 'Invoice number is duplicate.',
+      ),
+    ),
+    'links' => 
+    array (
+      0 => 
+      array (
+        'href' => 'https://developer.paypal.com/docs/api/invoicing/#errors',
+        'rel' => 'information_link',
+      ),
+    ),
+  ),
+)
+25.07.2019/15:24:31: 31.173.240.174: createDraftInvoice
+array (
+  'href' => 'https://api.sandbox.paypal.com/v2/invoicing/invoices/INV2-W9UD-87ZN-656E-DE34',
+  'result' => '{"rel":"self","href":"https://api.sandbox.paypal.com/v2/invoicing/invoices/INV2-W9UD-87ZN-656E-DE34","method":"GET"}',
+)
+25.07.2019/15:24:32: 31.173.240.174: process_payment
+array (
+  'order_id' => 4235,
+  'payment_link' => 'https://www.sandbox.paypal.com/invoice/p/#INV2-W9UD-87ZN-656E-DE34',
+  'redirect_link' => 'http://developertools.ru/en/qr-payments/?payment_link=https%3A%2F%2Fwww.sandbox.paypal.com%2Finvoice%2Fp%2F%23INV2-W9UD-87ZN-656E-DE34&order_id=4235',
+)
+25.07.2019/15:26:32: 173.0.82.126: webhook
+array (
+  'verify' => 'SUCCESS',
+)
+25.07.2019/15:26:32: 173.0.82.126: verifyWebhook $webhook_event_arr
+array (
+  '$webhook_event_arr' => 
+  array (
+    'id' => 'WH-5K309199XE711051X-9XX14528YS632171B',
+    'event_version' => '1.0',
+    'create_time' => '2019-07-25T15:26:09.882Z',
+    'resource_type' => 'invoices',
+    'event_type' => 'INVOICING.INVOICE.PAID',
+    'summary' => 'An invoice is paid, partially paid, or payment is made and is pending.',
+    'resource' => 
+    array (
+      'invoice' => 
+      array (
+        'id' => 'INV2-W9UD-87ZN-656E-DE34',
+        'status' => 'PAID',
+        'detail' => 
+        array (
+          'reference' => 'developertools.ru',
+          'currency_code' => 'USD',
+          'note' => 'Thank you for your purchase!',
+          'memo' => 'This is a long contract',
+          'invoice_number' => '4235-5d39c9adc292e',
+          'invoice_date' => '2019-07-25',
+          'metadata' => 
+          array (
+            'create_time' => '2019-07-25T15:24:31Z',
+            'last_update_time' => '2019-07-25T15:25:49Z',
+            'first_sent_time' => '2019-07-25T15:24:32Z',
+            'last_sent_time' => '2019-07-25T15:24:32Z',
+            'created_by_flow' => 'REGULAR_SINGLE',
+            'recipient_view_url' => 'https://www.sandbox.paypal.com/invoice/p/#W9UD87ZN656EDE34',
+            'invoicer_view_url' => 'https://www.sandbox.paypal.com/invoice/details/INV2-W9UD-87ZN-656E-DE34',
+          ),
+        ),
+        'invoicer' => 
+        array (
+          'name' => 
+          array (
+            'given_name' => 'Vitaly',
+            'surname' => 'Mironov',
+            'full_name' => 'Vitaly Mironov',
+          ),
+          'address' => 
+          array (
+            'address_line_1' => '1234 First Street',
+            'address_line_2' => '337673 Hillside Court',
+            'admin_area_2' => 'Anytown',
+            'admin_area_1' => 'CA',
+            'postal_code' => '98765',
+            'country_code' => 'US',
+          ),
+          'email_address' => 'merchant@example.com',
+          'phones' => 
+          array (
+            0 => 
+            array (
+              'country_code' => '001',
+              'national_number' => '4085551234',
+              'phone_type' => 'MOBILE',
+            ),
+          ),
+          'website' => 'http://developertools.ru',
+          'logo_url' => 'https://cl2.biolabrx.com/wp-content/themes/storefront/img/logo.png',
+        ),
+        'primary_recipients' => 
+        array (
+          0 => 
+          array (
+            'billing_info' => 
+            array (
+              'name' => 
+              array (
+                'given_name' => 'USA',
+                'surname' => 'USA',
+                'full_name' => 'USA USA',
+              ),
+              'address' => 
+              array (
+                'address_line_1' => 'USA',
+                'admin_area_2' => 'USA',
+                'admin_area_1' => 'AK',
+                'postal_code' => '63009',
+                'country_code' => 'US',
+              ),
+              'email_address' => 'usausa@mail.usa',
+              'phones' => 
+              array (
+                0 => 
+                array (
+                  'country_code' => '34',
+                  'national_number' => '23423423423',
+                  'phone_type' => 'MOBILE',
+                ),
+              ),
+            ),
+            'shipping_info' => 
+            array (
+              'name' => 
+              array (
+                'given_name' => 'USA',
+                'surname' => 'USA',
+                'full_name' => 'USA USA',
+              ),
+              'address' => 
+              array (
+                'address_line_1' => 'USA',
+                'admin_area_2' => 'USA',
+                'admin_area_1' => 'AK',
+                'postal_code' => '63009',
+                'country_code' => 'US',
+              ),
+            ),
+          ),
+        ),
+        'items' => 
+        array (
+          0 => 
+          array (
+            'id' => 'ITEM-4LD87812LG753890E',
+            'name' => 'Hair Rescue Rx® Men\'s - 1 Month Supply',
+            'quantity' => '1',
+            'unit_amount' => 
+            array (
+              'currency_code' => 'USD',
+              'value' => '69.99',
+            ),
+            'discount' => 
+            array (
+              'amount' => 
+              array (
+                'currency_code' => 'USD',
+                'value' => '0.00',
+              ),
+            ),
+            'unit_of_measure' => 'QUANTITY',
+          ),
+          1 => 
+          array (
+            'id' => 'ITEM-69A24756BC4164842',
+            'name' => 'Hair Rescue Rx® Women\'s (www)(en) - 3 Months Supply',
+            'quantity' => '1',
+            'unit_amount' => 
+            array (
+              'currency_code' => 'USD',
+              'value' => '209.97',
+            ),
+            'discount' => 
+            array (
+              'amount' => 
+              array (
+                'currency_code' => 'USD',
+                'value' => '-14.97',
+              ),
+            ),
+            'unit_of_measure' => 'QUANTITY',
+          ),
+        ),
+        'configuration' => 
+        array (
+          'tax_calculated_after_discount' => false,
+          'tax_inclusive' => false,
+          'allow_tip' => false,
+          'template_id' => 'TEMP-268217337T270740Y',
+        ),
+        'amount' => 
+        array (
+          'breakdown' => 
+          array (
+            'item_total' => 
+            array (
+              'currency_code' => 'USD',
+              'value' => '279.96',
+            ),
+            'discount' => 
+            array (
+              'invoice_discount' => 
+              array (
+                'amount' => 
+                array (
+                  'currency_code' => 'USD',
+                  'value' => '-21.00',
+                ),
+              ),
+              'item_discount' => 
+              array (
+                'currency_code' => 'USD',
+                'value' => '-14.97',
+              ),
+            ),
+            'tax_total' => 
+            array (
+              'currency_code' => 'USD',
+              'value' => '0.00',
+            ),
+            'shipping' => 
+            array (
+              'amount' => 
+              array (
+                'currency_code' => 'USD',
+                'value' => '0.00',
+              ),
+            ),
+          ),
+          'currency_code' => 'USD',
+          'value' => '243.99',
+        ),
+        'due_amount' => 
+        array (
+          'currency_code' => 'USD',
+          'value' => '0.00',
+        ),
+        'payments' => 
+        array (
+          'paid_amount' => 
+          array (
+            'currency_code' => 'USD',
+            'value' => '243.99',
+          ),
+          'transactions' => 
+          array (
+            0 => 
+            array (
+              'type' => 'PAYPAL',
+              'payment_id' => '5FE36166C83585936',
+              'transaction_type' => 'SALE',
+              'payment_date' => '2019-07-25T15:25:49Z',
+              'method' => 'PAYPAL',
+              'amount' => 
+              array (
+                'currency_code' => 'USD',
+                'value' => '243.99',
+              ),
+            ),
+          ),
+        ),
+        'links' => 
+        array (
+          0 => 
+          array (
+            'href' => 'https://api.sandbox.paypal.com/v2/invoicing/invoices/INV2-W9UD-87ZN-656E-DE34',
+            'rel' => 'self',
+            'method' => 'GET',
+          ),
+        ),
+      ),
+    ),
+    'links' => 
+    array (
+      0 => 
+      array (
+        'href' => 'https://api.sandbox.paypal.com/v1/notifications/webhooks-events/WH-5K309199XE711051X-9XX14528YS632171B',
+        'rel' => 'self',
+        'method' => 'GET',
+      ),
+      1 => 
+      array (
+        'href' => 'https://api.sandbox.paypal.com/v1/notifications/webhooks-events/WH-5K309199XE711051X-9XX14528YS632171B/resend',
+        'rel' => 'resend',
+        'method' => 'POST',
+      ),
+    ),
+  ),
+)
+25.07.2019/15:26:33: 173.0.82.126: verifyWebhook
+array (
+  'payment complete' => true,
+)
+25.07.2019/15:31:38: 173.0.82.126: webhook
+array (
+  'verify' => 'SUCCESS',
+)
+25.07.2019/15:31:38: 173.0.82.126: verifyWebhook $webhook_event_arr
+array (
+  '$webhook_event_arr' => 
+  array (
+    'id' => 'WH-5K309199XE711051X-9XX14528YS632171B',
+    'event_version' => '1.0',
+    'create_time' => '2019-07-25T15:26:09.882Z',
+    'resource_type' => 'invoices',
+    'event_type' => 'INVOICING.INVOICE.PAID',
+    'summary' => 'An invoice is paid, partially paid, or payment is made and is pending.',
+    'resource' => 
+    array (
+      'invoice' => 
+      array (
+        'id' => 'INV2-W9UD-87ZN-656E-DE34',
+        'status' => 'PAID',
+        'detail' => 
+        array (
+          'reference' => 'developertools.ru',
+          'currency_code' => 'USD',
+          'note' => 'Thank you for your purchase!',
+          'memo' => 'This is a long contract',
+          'invoice_number' => '4235-5d39c9adc292e',
+          'invoice_date' => '2019-07-25',
+          'metadata' => 
+          array (
+            'create_time' => '2019-07-25T15:24:31Z',
+            'last_update_time' => '2019-07-25T15:25:49Z',
+            'first_sent_time' => '2019-07-25T15:24:32Z',
+            'last_sent_time' => '2019-07-25T15:24:32Z',
+            'created_by_flow' => 'REGULAR_SINGLE',
+            'recipient_view_url' => 'https://www.sandbox.paypal.com/invoice/p/#W9UD87ZN656EDE34',
+            'invoicer_view_url' => 'https://www.sandbox.paypal.com/invoice/details/INV2-W9UD-87ZN-656E-DE34',
+          ),
+        ),
+        'invoicer' => 
+        array (
+          'name' => 
+          array (
+            'given_name' => 'Vitaly',
+            'surname' => 'Mironov',
+            'full_name' => 'Vitaly Mironov',
+          ),
+          'address' => 
+          array (
+            'address_line_1' => '1234 First Street',
+            'address_line_2' => '337673 Hillside Court',
+            'admin_area_2' => 'Anytown',
+            'admin_area_1' => 'CA',
+            'postal_code' => '98765',
+            'country_code' => 'US',
+          ),
+          'email_address' => 'merchant@example.com',
+          'phones' => 
+          array (
+            0 => 
+            array (
+              'country_code' => '001',
+              'national_number' => '4085551234',
+              'phone_type' => 'MOBILE',
+            ),
+          ),
+          'website' => 'http://developertools.ru',
+          'logo_url' => 'https://cl2.biolabrx.com/wp-content/themes/storefront/img/logo.png',
+        ),
+        'primary_recipients' => 
+        array (
+          0 => 
+          array (
+            'billing_info' => 
+            array (
+              'name' => 
+              array (
+                'given_name' => 'USA',
+                'surname' => 'USA',
+                'full_name' => 'USA USA',
+              ),
+              'address' => 
+              array (
+                'address_line_1' => 'USA',
+                'admin_area_2' => 'USA',
+                'admin_area_1' => 'AK',
+                'postal_code' => '63009',
+                'country_code' => 'US',
+              ),
+              'email_address' => 'usausa@mail.usa',
+              'phones' => 
+              array (
+                0 => 
+                array (
+                  'country_code' => '34',
+                  'national_number' => '23423423423',
+                  'phone_type' => 'MOBILE',
+                ),
+              ),
+            ),
+            'shipping_info' => 
+            array (
+              'name' => 
+              array (
+                'given_name' => 'USA',
+                'surname' => 'USA',
+                'full_name' => 'USA USA',
+              ),
+              'address' => 
+              array (
+                'address_line_1' => 'USA',
+                'admin_area_2' => 'USA',
+                'admin_area_1' => 'AK',
+                'postal_code' => '63009',
+                'country_code' => 'US',
+              ),
+            ),
+          ),
+        ),
+        'items' => 
+        array (
+          0 => 
+          array (
+            'id' => 'ITEM-4LD87812LG753890E',
+            'name' => 'Hair Rescue Rx® Men\'s - 1 Month Supply',
+            'quantity' => '1',
+            'unit_amount' => 
+            array (
+              'currency_code' => 'USD',
+              'value' => '69.99',
+            ),
+            'discount' => 
+            array (
+              'amount' => 
+              array (
+                'currency_code' => 'USD',
+                'value' => '0.00',
+              ),
+            ),
+            'unit_of_measure' => 'QUANTITY',
+          ),
+          1 => 
+          array (
+            'id' => 'ITEM-69A24756BC4164842',
+            'name' => 'Hair Rescue Rx® Women\'s (www)(en) - 3 Months Supply',
+            'quantity' => '1',
+            'unit_amount' => 
+            array (
+              'currency_code' => 'USD',
+              'value' => '209.97',
+            ),
+            'discount' => 
+            array (
+              'amount' => 
+              array (
+                'currency_code' => 'USD',
+                'value' => '-14.97',
+              ),
+            ),
+            'unit_of_measure' => 'QUANTITY',
+          ),
+        ),
+        'configuration' => 
+        array (
+          'tax_calculated_after_discount' => false,
+          'tax_inclusive' => false,
+          'allow_tip' => false,
+          'template_id' => 'TEMP-268217337T270740Y',
+        ),
+        'amount' => 
+        array (
+          'breakdown' => 
+          array (
+            'item_total' => 
+            array (
+              'currency_code' => 'USD',
+              'value' => '279.96',
+            ),
+            'discount' => 
+            array (
+              'invoice_discount' => 
+              array (
+                'amount' => 
+                array (
+                  'currency_code' => 'USD',
+                  'value' => '-21.00',
+                ),
+              ),
+              'item_discount' => 
+              array (
+                'currency_code' => 'USD',
+                'value' => '-14.97',
+              ),
+            ),
+            'tax_total' => 
+            array (
+              'currency_code' => 'USD',
+              'value' => '0.00',
+            ),
+            'shipping' => 
+            array (
+              'amount' => 
+              array (
+                'currency_code' => 'USD',
+                'value' => '0.00',
+              ),
+            ),
+          ),
+          'currency_code' => 'USD',
+          'value' => '243.99',
+        ),
+        'due_amount' => 
+        array (
+          'currency_code' => 'USD',
+          'value' => '0.00',
+        ),
+        'payments' => 
+        array (
+          'paid_amount' => 
+          array (
+            'currency_code' => 'USD',
+            'value' => '243.99',
+          ),
+          'transactions' => 
+          array (
+            0 => 
+            array (
+              'type' => 'PAYPAL',
+              'payment_id' => '5FE36166C83585936',
+              'transaction_type' => 'SALE',
+              'payment_date' => '2019-07-25T15:25:49Z',
+              'method' => 'PAYPAL',
+              'amount' => 
+              array (
+                'currency_code' => 'USD',
+                'value' => '243.99',
+              ),
+            ),
+          ),
+        ),
+        'links' => 
+        array (
+          0 => 
+          array (
+            'href' => 'https://api.sandbox.paypal.com/v2/invoicing/invoices/INV2-W9UD-87ZN-656E-DE34',
+            'rel' => 'self',
+            'method' => 'GET',
+          ),
+        ),
+      ),
+    ),
+    'links' => 
+    array (
+      0 => 
+      array (
+        'href' => 'https://api.sandbox.paypal.com/v1/notifications/webhooks-events/WH-5K309199XE711051X-9XX14528YS632171B',
+        'rel' => 'self',
+        'method' => 'GET',
+      ),
+      1 => 
+      array (
+        'href' => 'https://api.sandbox.paypal.com/v1/notifications/webhooks-events/WH-5K309199XE711051X-9XX14528YS632171B/resend',
+        'rel' => 'resend',
+        'method' => 'POST',
+      ),
+    ),
+  ),
+)

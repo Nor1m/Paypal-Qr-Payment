@@ -1,0 +1,434 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: QR payments via PayPal\n"
+"POT-Creation-Date: 2019-07-28 22:26+0700\n"
+"PO-Revision-Date: 2019-07-28 22:25+0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: nor1m-paypal-qr-payment.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: includes/class-npqp-form-fields.php:4
+msgid "Enable/Disable"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:5
+msgid "Enable QR payments via PayPal"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:11
+msgid "Title"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:13
+msgid "This controls the title which the user sees during checkout."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+#: includes/class-npqp-form-fields.php:14 nor1m-paypal-qr-payment.php:84
+msgid "QR payments via PayPal"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:18
+msgid "Description"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:20
+msgid "This controls the description which the user sees during checkout."
+msgstr ""
+
+#. Description of the plugin/theme
+#: includes/class-npqp-form-fields.php:21
+msgid "Take QR payments via PayPal on your store."
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:24
+msgid "Sandbox mode"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:25
+msgid "Enable Sandbox Mode"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:27
+msgid "Place the payment gateway in test mode using Sandbox API keys."
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:32
+msgid "Sandbox API Credentials"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:36
+msgid "Sandbox API Client Id"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:40
+msgid "Sandbox PayPal Webhook Id"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:44
+msgid "Sandbox API Client Secret"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:48
+msgid "Live API Credentials"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:52
+msgid "Live API Client Id"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:56
+msgid "Live API Client Secret"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:60
+msgid "Live PayPal Webhook Id"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:64
+msgid "QR code settings"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:68
+msgid "QR page url"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:69
+msgid "e.g. - qr-payments"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:75
+msgid "Width"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:76
+msgid "The width of the qr code(px)."
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:82
+msgid "Height"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:83
+msgid "The height of the qr code(px)."
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:89
+msgid "QR code stroke color"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:90
+msgid "In HEX format. e.g. - #000"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:96
+msgid "Invoice details"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:100
+msgid "Detail note"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:101
+msgid "e.g. - Thank you for your purchase!"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:103
+msgid "Thank you for your purchase!"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:107
+msgid "Detail term"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:108
+msgid "No refunds after 30 days."
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:112
+msgid "Detail memo"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:113
+msgid "This is a long contract"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:117
+msgid "Additional notes"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:118
+msgid "Additional notes about your store"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:123
+msgid "Tax id"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:127
+msgid "Invoicer data"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:131
+msgid "Given name"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:132
+msgid "e.g. - Vitaly"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:137
+msgid "Surname"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:138
+msgid "e.g. - Mironov"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:143
+msgid "Address 1"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:144
+msgid "e.g. - 1234 First Street"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:149
+msgid "Address 2"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:150
+msgid "e.g. - 12345 Hillside Court"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:155
+msgid "City"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:156
+msgid "e.g. - Anytown"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:161
+msgid "State"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:162
+msgid "e.g. - CA"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:167
+msgid "Country code"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:168
+msgid "e.g. - US"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:173
+msgid "Postal code"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:174
+msgid "e.g. - 98765"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:179
+msgid "Phone Country code"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:180
+msgid "e.g. - 001"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:185
+msgid "National number"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:186
+msgid "e.g. - 4085551234"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:191
+msgid "Phone type"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:204
+msgid "Email address"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:205
+msgid "e.g. - merchant@example.com"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:210
+msgid "Website"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:211
+msgid "The invoicer's website. e.g. - http://site.com"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:217
+msgid "Logo url"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:218
+msgid ""
+"The full URL to an external logo image. The logo image must not be larger "
+"than 250 pixels wide by 90 pixels high. Https required."
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:223
+msgid "Term"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:227
+msgid "Term type"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:244
+msgid "Due date(days)"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:245
+msgid "e.g. - 30"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:251
+msgid "Custom amount"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:255
+msgid "Custom amount inclusive"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:260
+msgid "Label"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:262
+msgid "e.g. - Packing Charges"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:266
+msgid "Currency code"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:268
+msgid "e.g. - USD"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:272
+msgid "Currency value"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:274
+msgid "e.g. - 10.00"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:278
+msgid "Tax"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:282
+msgid "Tax inclusive"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:287
+msgid "Tax name"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:289
+msgid "e.g. - Sales Tax"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:293
+msgid "Tax percent"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:295
+msgid "e.g. - 7.25"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:299
+msgid "Tax calculated after discount"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:304
+msgid "Configuration"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:308
+msgid "Unit of measure"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:319
+msgid "Billing phone type"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:332
+msgid "Allow tip"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:337
+msgid "Short product description"
+msgstr ""
+
+#: includes/class-npqp-form-fields.php:339
+msgid "Show short product description in invoice"
+msgstr ""
+
+#: nor1m-paypal-qr-payment.php:85
+msgid "Payment with qr code"
+msgstr ""
+
+#: nor1m-paypal-qr-payment.php:116
+msgid "Visit site"
+msgstr ""
+
+#: nor1m-paypal-qr-payment.php:117
+msgid "Donate"
+msgstr ""
+
+#: nor1m-paypal-qr-payment.php:185
+msgid "First name is required!"
+msgstr ""
+
+#: nor1m-paypal-qr-payment.php:217
+msgid "No valid payment link"
+msgstr ""
+
+#: nor1m-paypal-qr-payment.php:296
+msgid "Hey, your order is paid! Thank you!"
+msgstr ""
+
+#: nor1m-paypal-qr-payment.php:356
+msgid "Action is missed"
+msgstr ""
+
+#: nor1m-paypal-qr-payment.php:369
+msgid "Invalid order id"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Nor1mSoft"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://nor1m.ru"
+msgstr ""

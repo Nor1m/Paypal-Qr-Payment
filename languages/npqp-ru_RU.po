@@ -1,24 +1,24 @@
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "Project-Id-Version: QR payments via PayPal\n"
-"POT-Creation-Date: 2019-07-28 22:26+0700\n"
-"PO-Revision-Date: 2019-07-28 23:07+0700\n"
+"POT-Creation-Date: 2019-09-29 23:57+0700\n"
+"PO-Revision-Date: 2019-09-29 23:58+0700\n"
+"Last-Translator: \n"
 "Language-Team: \n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "X-Generator: Poedit 2.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: nor1m-paypal-qr-payment.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;"
-"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
-"esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
-"Last-Translator: \n"
-"Language: ru\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
@@ -39,7 +39,7 @@ msgid "This controls the title which the user sees during checkout."
 msgstr "Заголовок, который пользователь видит во время оформления заказа."
 
 #. Plugin Name of the plugin/theme
-#: includes/class-npqp-form-fields.php:14 nor1m-paypal-qr-payment.php:84
+#: includes/class-npqp-form-fields.php:14 nor1m-paypal-qr-payment.php:96
 msgid "QR payments via PayPal"
 msgstr "QR платежи с помощью PayPal"
 
@@ -78,12 +78,12 @@ msgid "Sandbox API Client Id"
 msgstr "Sandbox API Client Id"
 
 #: includes/class-npqp-form-fields.php:40
-msgid "Sandbox PayPal Webhook Id"
-msgstr "Sandbox PayPal Webhook Id"
-
-#: includes/class-npqp-form-fields.php:44
 msgid "Sandbox API Client Secret"
 msgstr "Sandbox API Client Secret"
+
+#: includes/class-npqp-form-fields.php:44
+msgid "Sandbox PayPal Webhook Id"
+msgstr "Sandbox PayPal Webhook Id"
 
 #: includes/class-npqp-form-fields.php:48
 msgid "Live API Credentials"
@@ -398,42 +398,48 @@ msgstr "Краткое описание продукта "
 msgid "Show short product description in invoice"
 msgstr "Показать краткое описание продукта"
 
-#: nor1m-paypal-qr-payment.php:85
+#: nor1m-paypal-qr-payment.php:15
+msgid "WooCommerce is not installed, therefore you can’t use this plugin"
+msgstr ""
+"WooCommerce не установлен, поэтому вы не можете использовать этот плагин"
+
+#: nor1m-paypal-qr-payment.php:97
 msgid "Payment with qr code"
 msgstr "Оплата с помощью QR-кода"
 
-#: nor1m-paypal-qr-payment.php:116
-msgid "Visit site"
-msgstr "Посетить сайт разработчика"
-
-#: nor1m-paypal-qr-payment.php:117
-msgid "Donate"
-msgstr "Сделать пожертвование"
-
-#: nor1m-paypal-qr-payment.php:185
+#: nor1m-paypal-qr-payment.php:195
 msgid "First name is required!"
 msgstr "Имя обязательно!"
 
-#: nor1m-paypal-qr-payment.php:217
+#: nor1m-paypal-qr-payment.php:227
 msgid "No valid payment link"
 msgstr "Платежная ссылка недействительна"
 
-#: nor1m-paypal-qr-payment.php:296
+#: nor1m-paypal-qr-payment.php:307
 msgid "Hey, your order is paid! Thank you!"
 msgstr "Эй, ваш заказ оплачен! Спасибо!"
 
-#: nor1m-paypal-qr-payment.php:356
+#: nor1m-paypal-qr-payment.php:367
 msgid "Action is missed"
 msgstr "Действие пропущено"
 
-#: nor1m-paypal-qr-payment.php:369
+#: nor1m-paypal-qr-payment.php:380
 msgid "Invalid order id"
 msgstr "Неверный номер заказа "
 
 #. Author of the plugin/theme
-msgid "Nor1mSoft"
-msgstr "Nor1mSoft"
+msgid "Vitaly Mironov"
+msgstr "Vitaly Mironov"
 
 #. Author URI of the plugin/theme
 msgid "http://nor1m.ru"
 msgstr "http://nor1m.ru"
+
+#~ msgid "Visit site"
+#~ msgstr "Посетить сайт разработчика"
+
+#~ msgid "Donate"
+#~ msgstr "Сделать пожертвование"
+
+#~ msgid "Nor1mSoft"
+#~ msgstr "Nor1mSoft"

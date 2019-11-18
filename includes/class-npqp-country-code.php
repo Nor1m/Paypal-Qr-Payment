@@ -2,7 +2,7 @@
 class NPQP_Country_Code{
     
     public function getCountryCode($phone){
-       $country_code = $this->getCountryCodeApi($phone) ? $this->getCountryCodeApi($phone) : $this->getCountryCodeArr($phone);
+       $country_code = $this->getCountryCodeArr($phone);
        return $country_code;
     }
     

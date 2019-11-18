@@ -36,13 +36,13 @@ $return = array(
 		'title'       => __('Sandbox API Client Id', 'npqp'),
 		'type'        => 'text'
 	),
-	'sandbox_paypal_webhook_id' => array(
-		'title'       => __('Sandbox PayPal Webhook Id', 'npqp'),
-		'type'        => 'text'
-	),
 	'sandbox_api_secret_id' => array(
 		'title'       => __('Sandbox API Client Secret', 'npqp'),
 		'type'        => 'text',
+	),
+	'sandbox_paypal_webhook_id' => array(
+		'title'       => __('Sandbox PayPal Webhook Id', 'npqp'),
+		'type'        => 'text'
 	),
 	'live_paypal_hosted_settings_title' => array(
 		'title'       => __('Live API Credentials', 'npqp'),

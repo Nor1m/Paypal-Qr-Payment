@@ -1,7 +1,5 @@
 <?php
 
-//debug($order, 1);
-
 if ( !$order ){
     wp_die('Not isset order data');
     return;
@@ -12,10 +10,16 @@ if ( !$order ){
 
 $billing           = $order->data['billing'];
 $country_code_res  = $NPQP_Country_Code->getCountryCode( $billing['phone'] );
+
 $b_country_code    = $country_code_res['country_code'];
 $b_national_number = $country_code_res['number'];
 
 $shipping          = $order->data['shipping'];
+
+// Если нет шипинга, то данные берем из биллинга
+if ( empty($shipping['postcode']) && empty($shipping['country']) ) {
+    $shipping = $billing;
+}
 
 $invoice_number    = $order->id;
 $currency_code     = $order->data['currency'] ? $order->data['currency'] : 'USD';
@@ -116,8 +120,6 @@ if ( !is_wp_error( $order_items ) ) {
 	    $i++;
 	}
 }
-
-//debug($items, 1);
 
 $primary_recipients = [
     [

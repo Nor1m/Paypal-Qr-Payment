@@ -1,6 +1,6 @@
 var successCallback = function(data) {
  
-	var checkout_form = $( 'form.woocommerce-checkout' );
+	var checkout_form = jQuery( 'form.woocommerce-checkout' );
  
 	// add a token to our hidden input field
 	console.log('successCallback', data);
@@ -28,7 +28,7 @@ var errorCallback = function(data) {
 
 
 jQuery(function($){
-    
+
     jQuery('body').on('click', '#npqp-qr-generate', function(e){
         nqpq_qr_code_show();
     });
@@ -36,8 +36,8 @@ jQuery(function($){
     nqpq_qr_code_show();
     
     function nqpq_qr_code_show(){
-        
-        jQuery('#npqp-qrcode').html('');
+
+        $('#npqp-qrcode').html('');
         
         if ( jQuery('#npqp-qrcode-text').val() ) {
             var qrcode_text = jQuery('#npqp-qrcode-text').val();
@@ -76,4 +76,44 @@ jQuery(function($){
     if ( npqp_params.is_qrcodepage ){
         setInterval(npqp_ajax_getorderpaidstatus, 3000);
     }
+
+    function maskTel(el) {
+        if ( ! window.maskTel_k ) {
+            window.maskTel_k = 10;
+        }
+        window.maskTel_k--;
+        if (window.maskTel_k <= 0) return;
+        if (typeof ($.masksLoad) == 'indefined') {
+            setTimeout(function () {
+                maskTel(el)
+            }, 200)
+        } else {
+            window.maskTel_k = 10;
+            var maskList = $.masksSort($.masksLoad( npqp_params.npqp_plugin_js_url + "/phone-codes.json"), ['#'], /[0-9]|#/, "mask");
+            var maskOpts = {
+                inputmask: {
+                    definitions: {
+                        '#': {validator: "[0-9]", cardinality: 1}
+                    },
+                    clearIncomplete: true,
+                    showMaskOnHover: false,
+                    autoUnmask: true
+                },
+                match: /[0-9]/,
+                replace: '#',
+                list: maskList,
+                listKey: "mask",
+            }
+            jQuery(el).inputmasks(maskOpts);
+        }
+    }
+
+    if ( jQuery('#billing_phone').length ) {
+        maskTel( jQuery('#billing_phone') );
+    }
+
+    if ( jQuery('#shipping_phone').length ) {
+        maskTel( jQuery('#shipping_phone') );
+    }
+
 });

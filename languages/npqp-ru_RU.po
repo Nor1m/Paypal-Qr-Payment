@@ -435,11 +435,26 @@ msgstr "Vitaly Mironov"
 msgid "http://nor1m.ru"
 msgstr "http://nor1m.ru"
 
-#~ msgid "Visit site"
-#~ msgstr "Посетить сайт разработчика"
+msgid "Visit site"
+msgstr "Посетить сайт разработчика"
 
-#~ msgid "Donate"
-#~ msgstr "Сделать пожертвование"
+msgid "Donate"
+msgstr "Сделать пожертвование"
 
-#~ msgid "Nor1mSoft"
-#~ msgstr "Nor1mSoft"
+msgid "Nor1mSoft"
+msgstr "Nor1mSoft"
+
+msgid "Payment is pending"
+msgstr "Ожидается оплата"
+
+msgid "Pay by link"
+msgstr "Оплатить по ссылке"
+
+msgid "Back to checkout"
+msgstr "Вернуться назад"
+
+msgid "After payment, the response is received within 2 minutes. You will be automatically redirected to the successful order page"
+msgstr "После оплаты ответ приходит в течении 2-х минут. Вы будете автоматически перенаправлены на страницу успешного заказа"
+
+msgid "Settings"
+msgstr "Настройки"

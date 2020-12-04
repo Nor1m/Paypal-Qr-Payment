@@ -19,6 +19,7 @@ $return = array(
 		'type'        => 'textarea',
 		'description' => __('This controls the description which the user sees during checkout.', 'npqp'),
 		'default'     => __('Take QR payments via PayPal on your store.', 'npqp'),
+        'desc_tip'    => true,
 	),
 	'testmode' => array(
 		'title'       => __('Sandbox mode', 'npqp'),
@@ -42,6 +43,7 @@ $return = array(
 	),
 	'sandbox_paypal_webhook_id' => array(
 		'title'       => __('Sandbox PayPal Webhook Id', 'npqp'),
+        'description' => __('Webhook: https://' . $_SERVER['SERVER_NAME'] . '/wc-api/npqp/. Events tracked: * All Events'),
 		'type'        => 'text'
 	),
 	'live_paypal_hosted_settings_title' => array(
@@ -58,18 +60,12 @@ $return = array(
 	),
 	'live_paypal_webhook_id' => array(
 		'title'       => __('Live PayPal Webhook Id', 'npqp'),
+		'description' => __('Webhook: https://' . $_SERVER['SERVER_NAME'] . '/wc-api/npqp/. Events tracked: * All Events'),
 		'type'        => 'text'
 	),
 	'qr_settings' => array(
 		'title'       => __('QR code settings', 'npqp'),
 		'type'        => 'title',
-	),
-	'qr_code_page_url' => array(
-		'title'       => __('QR page url', 'npqp'),
-		'description' => __('e.g. - qr-payments', 'npqp'),
-		'default'     => 'qr-payments',
-		'desc_tip'    => true,
-		'type'        => 'text'
 	),
 	'qr_code_width' => array(
 		'title'       => __('Width', 'npqp'),

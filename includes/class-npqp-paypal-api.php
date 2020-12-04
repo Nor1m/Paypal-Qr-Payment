@@ -65,23 +65,30 @@ class NPQP_PayPal_API{
     // функция создания черновика
     public function createDraftInvoice($data){
 
-        $result = $this->client('post', $this->paypal_url . '/v2/invoicing/invoices', $data);
-        $result = $result['result'];
+        $result_response = $this->client('post', $this->paypal_url . '/v2/invoicing/invoices', $data);
+        $result = $result_response['result'];
+        $issue = $result_response['issue'];
+        $success = $result_response['success'];
+
         $href = json_decode($result)->href;
 
-        if ( ! $href ) {
-            $result_arr = json_decode( $result, 1 );
+        if ( ! $success ) {
             // если инвойс уже существует, то добавляем к номеру уник. идент.
-            if ( isset($result_arr['details'][0]['issue']) && $result_arr['details'][0]['issue'] == 'DUPLICATE_INVOICE_NUMBER' ){
+            if ( $issue == 'DUPLICATE_INVOICE_NUMBER' ){
                 $data = json_decode( $data, 1 );
-                $data['detail']['invoice_number'] = $data['detail']['invoice_number'] . '-' . uniqid();
+                $new_invoice_number = $data['detail']['invoice_number'] . '-' . uniqid();
+                npqpLog('createDraftInvoice change invoice number', [
+                    'old' => $data['detail']['invoice_number'],
+                    'new' => $new_invoice_number,
+                ]);
+                $data['detail']['invoice_number'] = $new_invoice_number;
                 $data = json_encode($data, 1);
                 return $this->createDraftInvoice($data);
             }
             return $this->returnErrorMessage($result);
-        } else {
+        } else if ($href) {
             return $href;
-        };
+        }
     }
 
     // функция отправки черновика
@@ -144,7 +151,7 @@ class NPQP_PayPal_API{
 
         $result = $this->client( 'post', $this->paypal_url . '/v1/notifications/verify-webhook-signature', json_encode($data) );
 
-        if ( isset($result['result']) ) {
+        if ( isset($result['result']) && $result['success'] ) {
             $verification_status = json_decode($result['result'], true);
             $verification_status = $verification_status['verification_status'];
         }
@@ -170,14 +177,59 @@ class NPQP_PayPal_API{
         if ( $data ) $request_data['body'] = $data;
 
         $response = wp_remote_request( $where, $request_data );
+        $message = null;
+        $issue = null;
+        $code = 200;
 
-        if ( is_wp_error($response) ) return [
-            'code'   => 400,
-            'result' => false
-        ]; else return [
-            'code'   => 200,
-            'result' => $response['body']
-        ];
+        if ( isset($response['body']) && $response['body'] ) {
+
+            $body = json_decode($response['body']);
+
+            if ( isset($body->details) && isset($body->debug_id) ) {
+                if ( isset( $body->details[0]->issue ) ) {
+                    $issue = $body->details[0]->issue;
+                }
+                npqpLog('client error', [
+                    'where' => $where,
+                    'details' => $body->details,
+                    'issue' => $issue
+                ]);
+            }
+        }
+
+        if ( isset($response['body']) && $response['body'] ) {
+            $code = $response['response']['code'];
+        }
+        if ( isset($response['message']) && $response['message'] ) {
+            $message = $response['response']['message'];
+        }
+
+        $success = in_array($code, [200,201,202,203,204,205,206,207,208,226]);
+
+        if ( is_wp_error($response) ) {
+            $return_data = [
+                'success' => false,
+                'code'   => 400,
+                'message' => $message,
+                'result' => false,
+                'issue' => $issue
+            ];
+        } else {
+            $return_data = [
+                'success' => $success,
+                'code'   => $code,
+                'message' => $message,
+                'result' => $response['body'],
+                'issue' => $issue
+            ];
+        }
+
+        npqpLog('client', [
+            'where' => $where,
+            'data' => $return_data
+        ]);
+
+        return $return_data;
     }
 
     public function getJsonData(){

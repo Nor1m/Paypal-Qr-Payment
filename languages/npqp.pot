@@ -425,6 +425,17 @@ msgstr ""
 msgid "Vitaly Mironov"
 msgstr ""
 
-#. Author URI of the plugin/theme
-msgid "http://nor1m.ru"
+msgid "Payment is pending"
+msgstr ""
+
+msgid "Pay by link"
+msgstr ""
+
+msgid "Back to checkout"
+msgstr ""
+
+msgid "After payment, the response is received within 2 minutes. You will be automatically redirected to the successful order page"
+msgstr ""
+
+msgid "Settings"
 msgstr ""

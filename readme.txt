@@ -1,16 +1,18 @@
-﻿=== Qr payments via PayPal ===
+=== WooCommerce Qr payments via PayPal ===
 Contributors: nor1m
 Donate link: https://paypal.me/nor1m
 Tags: qr, payments, paypal, qr-code, code, gateway, nor1m, vitaly, pay
 Requires at least: 4.0.0
-Tested up to: 5.2.4
-Stable tag: 5.1
+Tested up to: 5.5
+Stable tag: 5.5
 
 QR payments via PayPal
 
 == Description ==
 Accept payments with a QR code. Payment goes through PayPal payment gateway. 
 You need to install the Woocommerce plugin.
+
+Use the correct phone number and address even for testing!
 
 == Installation ==
 

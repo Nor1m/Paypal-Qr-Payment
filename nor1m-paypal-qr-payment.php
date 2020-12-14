@@ -29,7 +29,9 @@ add_filter( 'plugin_action_links', 'npqp_plugin_action_links', 10, 2 );
 function npqp_plugin_action_links( $actions, $plugin_file ){
     if( false === strpos( $plugin_file, basename(__FILE__) ) )
         return $actions;
-    $settings_link = '<a href="/wp-admin/admin.php?page=wc-settings&tab=checkout&section=npqp' .'">' . __('Settings', 'npqp') . '</a>';
+    $settings_link = '<a href="/wp-admin/admin.php?page=wc-settings&tab=checkout&section=npqp">' . __('Settings', 'npqp') . '</a>';
+    array_unshift( $actions, $settings_link );
+    $settings_link = '<a target="_blank" href="https://nor1m.ru/shop/qr-manual?from=plugins">' . __('Guide', 'npqp') . '</a>';
     array_unshift( $actions, $settings_link );
     return $actions;
 }
@@ -77,7 +79,9 @@ function NPQP_add_gateway_class($gateways)
 }
 
 // правильный способ подключить стили и скрипты
-add_action('wp_enqueue_scripts', function () {
+add_action('admin_enqueue_scripts', 'npqp_wp_enqueue_scripts');
+add_action('wp_enqueue_scripts', 'npqp_wp_enqueue_scripts');
+function npqp_wp_enqueue_scripts () {
     // admin styles
     wp_enqueue_style('npqp_admin_css', plugins_url('assets/css/admin.css', __FILE__));
     // qr code generator
@@ -89,7 +93,7 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('jquery.bind', plugins_url('assets/js/jquery.bind.js', __FILE__), array('jquery'));
     wp_enqueue_script('jquery.phone', plugins_url('assets/js/jquery.phone.js', __FILE__), array('jquery'));
     wp_enqueue_script('jquery.inputmask', plugins_url('assets/js/jquery.inputmask.js', __FILE__), array('jquery'));
-});
+}
 
 /*
 * The class itself, please note that it is inside plugins_loaded action hook
@@ -429,3 +433,9 @@ function npqpLog($title, $data = false)
         }
     }
 }
+
+// guide button in wc-settings/checkout
+add_action( 'woocommerce_settings_checkout', function () { ?>
+    <a target="_blank" class="npqp-guide-link"
+       href="https://nor1m.ru/shop/qr-manual?from=wc-settings"><?= __('Guide', 'npqp') ?></a> <?php
+});

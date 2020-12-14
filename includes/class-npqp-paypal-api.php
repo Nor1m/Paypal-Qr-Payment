@@ -70,8 +70,6 @@ class NPQP_PayPal_API{
         $issue = $result_response['issue'];
         $success = $result_response['success'];
 
-        $href = json_decode($result)->href;
-
         if ( ! $success ) {
             // если инвойс уже существует, то добавляем к номеру уник. идент.
             if ( $issue == 'DUPLICATE_INVOICE_NUMBER' ){
@@ -86,8 +84,8 @@ class NPQP_PayPal_API{
                 return $this->createDraftInvoice($data);
             }
             return $this->returnErrorMessage($result);
-        } else if ($href) {
-            return $href;
+        } else {
+            return isset(json_decode($result)->href) ? json_decode($result)->href : false;
         }
     }
 
@@ -95,11 +93,10 @@ class NPQP_PayPal_API{
     public function sendDraftInvoice($href){
         $result = $this->client('post', $href . '/send');
         $result = $result['result'];
-        $href = json_decode($result)->href;
-        if ( ! $href ) {
+        if ( ! isset(json_decode($result)->href) ) {
             return $this->returnErrorMessage($result);
         } else {
-            return $href;
+            return json_decode($result)->href;
         }
     }
 

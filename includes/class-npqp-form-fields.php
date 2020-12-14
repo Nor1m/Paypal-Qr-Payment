@@ -221,7 +221,7 @@ $return = array(
 	), 
 	'term_type' => array(
 		'title'       => __('Term type', 'npqp'),
-		'default'     => 'NO_DUE_DATE',
+		'default'     => 'DUE_ON_RECEIPT',
 		'type'        => 'select',
 		'class'       => 'wc-enhanced-select',
 		'options'     => array(

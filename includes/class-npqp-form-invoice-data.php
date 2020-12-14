@@ -8,21 +8,24 @@ if ( !$order ){
     return;
 }
 
-$billing           = $order->data['billing'];
+$order_data = $order->get_data();
+$order_id = $order_data['id'];
+
+$billing           = $order_data['billing'];
 $country_code_res  = $NPQP_Country_Code->getCountryCode( $billing['phone'] );
 
 $b_country_code    = $country_code_res['country_code'];
 $b_national_number = $country_code_res['number'];
 
-$shipping          = $order->data['shipping'];
+$shipping          = $order_data['shipping'];
 
 // Если нет шипинга, то данные берем из биллинга
 if ( empty($shipping['postcode']) && empty($shipping['country']) ) {
     $shipping = $billing;
 }
 
-$invoice_number    = $order->id;
-$currency_code     = $order->data['currency'] ? $order->data['currency'] : 'USD';
+$invoice_number    = $order_id;
+$currency_code     = $order_data['currency'] ? $order_data['currency'] : 'USD';
 $due_days          = $fields['due_date'] ? (int)$fields['due_date'] : 0;
 $due_date          = date('Y-m-d', strtotime ('+' . $due_days . ' day'));
 
@@ -34,14 +37,14 @@ $amount = [
         "shipping" => [
             "amount" => [
                 "currency_code" => $currency_code,
-                "value"         => npqppriceFormat( (string)$order->data['shipping_total'] )
+                "value"         => npqppriceFormat( (string)$order_data['shipping_total'] )
             ],
         ],
         "discount" => [ 
             "invoice_discount" => [
                 "amount" => [
                     "currency_code" => $currency_code,
-                    "value"         => npqppriceFormat( (string)$order->data['discount_total'] )
+                    "value"         => npqppriceFormat( (string)$order_data['discount_total'] )
                 ],
             ]
         ]
@@ -204,9 +207,9 @@ $invoicer = [
 ];
 
 $configuration = [
-    "allow_tip"                     => $fields['allow_tip'] == "yes" ? true : false,
-    "tax_calculated_after_discount" => $fields['tax_calculated_after_discount'] == "yes" ? true : false,
-    "tax_inclusive"                 => $fields['tax_inclusive'] == "yes" ? true : false,
+    "allow_tip"                     => $fields['allow_tip'] === "yes" ? true : false,
+    "tax_calculated_after_discount" => $fields['tax_calculated_after_discount'] === "yes" ? true : false,
+    "tax_inclusive"                 => $fields['tax_inclusive'] === "yes" ? true : false,
 ];
 
 $return = [
@@ -220,7 +223,7 @@ $return = [
 
 $return = apply_filters( 'npqp_invoice_data', $return ); // filter
 
-//npqpLog('invoicer all return', $return);
+npqpLog('invoicer all return', $return);
 
 //debug($return, 1);
 

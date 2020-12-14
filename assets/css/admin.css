@@ -42,3 +42,19 @@
     color: #fff;
     background: linear-gradient(to right, rgba(118, 71, 230, 0.9), rgba(78, 102, 255, 0.9));
 }
+
+.npqp-guide-link {
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 3px;
+    border-radius: 3px;
+    box-shadow: 0px 5px 10px rgba(99, 86, 242, 0.34);
+    background: linear-gradient(to right, rgb(118, 71, 230), rgb(78, 102, 255));
+}
+.npqp-guide-link:active,
+.npqp-guide-link:hover{
+    color: #fff;
+    background: linear-gradient(to right, rgba(118, 71, 230, 0.9), rgba(78, 102, 255, 0.9));
+}

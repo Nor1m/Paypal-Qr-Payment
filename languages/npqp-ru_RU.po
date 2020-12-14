@@ -458,3 +458,6 @@ msgstr "После оплаты ответ приходит в течении 2-
 
 msgid "Settings"
 msgstr "Настройки"
+
+msgid "Guide"
+msgstr "Инструкция по настройке"

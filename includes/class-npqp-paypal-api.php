@@ -221,10 +221,10 @@ class NPQP_PayPal_API{
             ];
         }
 
-        npqpLog('client', [
+        /*npqpLog('client', [
             'where' => $where,
             'data' => $return_data
-        ]);
+        ]);*/
 
         return $return_data;
     }

@@ -288,6 +288,10 @@ function NPQP_init_gateway_class()
 
             $post = json_decode(file_get_contents('php://input'), 1);
 
+            npqpLog('webhook post', [
+                'post' => $post,
+            ]);
+
             if (isset($post['event_type']) && $post['event_type'] == 'INVOICING.INVOICE.PAID') {
 
                 $PayPalApi = new NPQP_PayPal_API([

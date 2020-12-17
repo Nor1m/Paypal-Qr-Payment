@@ -32,19 +32,22 @@ $due_date          = date('Y-m-d', strtotime ('+' . $due_days . ' day'));
 $site_url          = $_SERVER['SERVER_NAME'];
 $unit_of_measure   = $fields['unit_of_measure'] ? $fields['unit_of_measure'] : 'QUANTITY';
 
+//invoice_date = yesterday
+$invoice_date = date("Y-m-d", mktime(0, 0, 0, date('m'), date('d') - 1, date('Y')));
+
 $amount = [
     "breakdown" => [
         "shipping" => [
             "amount" => [
                 "currency_code" => $currency_code,
-                "value"         => npqppriceFormat( (string)$order_data['shipping_total'] )
+                "value"         => npqpPriceFormat( (string)$order_data['shipping_total'] )
             ],
         ],
         "discount" => [ 
             "invoice_discount" => [
                 "amount" => [
                     "currency_code" => $currency_code,
-                    "value"         => npqppriceFormat( (string)$order_data['discount_total'] )
+                    "value"         => npqpPriceFormat( (string)$order_data['discount_total'] )
                 ],
             ]
         ]
@@ -78,11 +81,11 @@ if ( !is_wp_error( $order_items ) ) {
 	    $product  = $order_item->get_product();
         
         $total = $product->get_sale_price() ? $product->get_sale_price() : $product->get_regular_price();
-        $total = npqppriceFormat( (string)$total );
+        $total = npqpPriceFormat( (string)$total );
         
         if ( $product->get_sale_price() ) {
             $discount_amount = ( ( $product->get_regular_price() - $product->get_sale_price() ) * $order_item->get_quantity() );
-            $discount_amount = npqppriceFormat( (string)$discount_amount );
+            $discount_amount = npqpPriceFormat( (string)$discount_amount );
         } else {
             $discount_amount = 0;
         }
@@ -101,7 +104,7 @@ if ( !is_wp_error( $order_items ) ) {
 	    
 	    $items[$i]['unit_amount'] = [
 	        "currency_code" => $currency_code,
-            "value"         => npqppriceFormat( $product->get_regular_price() )
+            "value"         => npqpPriceFormat( $product->get_regular_price() )
 	    ];
 	    
 	    $items[$i]['discount'] = [
@@ -162,12 +165,11 @@ $primary_recipients = [
         ]
     ]
 ];
-
 // детали платежа
 $detail = [
     "invoice_number"   => "$invoice_number",
     "reference"        => $site_url,
-    "invoice_date"     => date('Y-m-d'),
+    "invoice_date"     => $invoice_date,
     "currency_code"    => $currency_code,
     "note"             => $fields['detail_note'],
     "term"             => $fields['detail_term'],
@@ -223,12 +225,10 @@ $return = [
 
 $return = apply_filters( 'npqp_invoice_data', $return ); // filter
 
-npqpLog('invoicer all return', $return);
-
-//debug($return, 1);
+//npqpLog('invoicer all return', $return);
 
 // price format
-function npqppriceFormat($price){
+function npqpPriceFormat($price){
     return str_replace( [',', ' '], '', number_format( $price, 5 ) );
 }
 
